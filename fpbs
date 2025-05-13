@@ -1,0 +1,20 @@
+#!/bin/bash
+# Released into the Public Domain
+set -e
+
+# Generate timestamp for the filename
+date=$(date '+%H:%M:%S-%m-%d-%Y')
+backup="fedora-installed-packages-$date.log"
+
+echo "Fedora installed Package Logger v1.0"
+
+# Check if user is root
+if [[ $EUID -ne 0 ]]; then
+    echo "Error: This script must be run as root or with sudo."
+    exit 1
+fi
+
+# Backup mode only (no restore)
+echo "Logging installed packages to $backup..."
+rpm -qa > "$backup"
+echo "Successfully logged $(wc -l < "$backup") packages to $backup"
