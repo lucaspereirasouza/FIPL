@@ -1,7 +1,3 @@
-Sure! Here's a clean, professional version of the **README.md** without any emoji and with an MIT License:
-
----
-
 # Fedora Package Logger
 
 A lightweight Bash script to log all installed RPM packages on a Fedora system.
