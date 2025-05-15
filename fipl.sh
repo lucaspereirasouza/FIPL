@@ -22,9 +22,6 @@ dir_exists() {
     fi
 }
 
-
-
-
 if dir_exists; then
     echo "Logging installed packages to $backup..."
     rpm -qa > "$file_path/$backup"
