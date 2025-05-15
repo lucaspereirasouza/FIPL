@@ -10,24 +10,17 @@ A lightweight Bash script to log all installed RPM packages on a Fedora system.
 
 This script generates a `.log` file containing a list of all installed packages using `rpm -qa`, with the filename timestamped for easy tracking. It’s ideal for system audits, backups, or recreating environments.
 
-## Features
+## Output
 
 - Logs all installed RPM packages
 - Timestamped filenames: `fedora-installed-packages-HH:MM:SS-MM-DD-YYYY.log`
-- Requires root privileges
-- Simple and fast — no dependencies
 
 ## Usage
-The script must be run as root or with sudo, since it queries system-wide package data.
 
 1. Clone or download the script to your Fedora machine.
-2. Make it executable:
 
-   ```bash
-   chmod +x package-logger.sh
-   ```
-
-3. Run it with sudo:
+2. Run it:
+- also Requires root privileges
 
    ```bash
    sudo ./package-logger.sh
@@ -35,7 +28,7 @@ The script must be run as root or with sudo, since it queries system-wide packag
 
 4. The output log file will be created in the same directory.
 
-## Example Output File
+## the Output Example
 
 ```
 fedora-installed-packages-14:23:15-04-05-2025.log
